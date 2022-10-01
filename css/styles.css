@@ -1,0 +1,167 @@
+body {
+    padding: 1rem 7rem;
+    font-family: 'Poppins';
+}
+
+h1 {
+    font-weight: 200;
+}
+
+
+
+h1, h2 {
+    color: hsl(234, 12%, 34%);
+    font-size: 1.6rem;
+    line-height: 0.5;
+}
+
+h3 {
+    color: hsl(234, 12%, 34%);
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+img {
+    float: right;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+    gap: 1.5rem;
+}
+
+.header {
+    text-align: center;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    width: 30rem;
+    justify-self: center;
+}
+
+.header p {
+    color: hsl(229, 6%, 66%);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.grid-items {
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 0.3rem;
+    box-shadow: 6px 6px 23px hsl(229, 6%, 66%);
+    height: 25vh;
+    padding: 1.5rem 2rem;
+}
+
+.grid-items p {
+    color: hsl(229, 6%, 66%);
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+    grid-column: 1;
+    grid-row: 3 / 5;
+}
+
+.team-builder {
+    border-top: 3px solid hsl(0, 78%, 62%);
+    grid-column: 2 / 3;
+    grid-row: 2 / span 2;
+}
+
+.karma {
+    border-top: 3px solid hsl(34, 97%, 64%);
+    grid-column: 2;
+    grid-row: 4 / span 2; 
+}
+
+.calculator {
+    border-top: 3px solid hsl(212, 86%, 64%);
+    grid-column: 3;
+    grid-row: 3 / span 2;
+}
+
+@media (max-width:60.75rem) {
+    .grid-items {
+        padding: 0.9rem 1.4rem;
+    }
+}
+
+@media (max-width:57.3125rem) {
+    body {
+        padding: 1rem 1.5rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-items {
+        height: auto;
+    }
+
+    .supervisor {
+        grid-column: 1;
+        grid-row: 2 / 2;
+    }
+    
+    .team-builder {
+        grid-column: 2 / 3;
+        grid-row: 3 / 3;
+    }
+    
+    .karma {
+        grid-column: 1;
+        grid-row: 3 / 3; 
+    }
+    
+    .calculator {
+        grid-column: 2;
+        grid-row: 4 / span 2;
+    }
+}
+
+@media (max-width:31.25rem) {
+    body {
+        padding: 1rem 1.5rem;
+    }
+
+    .header {
+        width: 50vh;
+    }
+
+    .grid-items {
+        width: 40vh;
+    }
+
+    .container {
+        justify-items: center;
+        width: 40vh;
+    }
+
+    .supervisor {
+        grid-column: 1 /span 3;
+        grid-row: 2 / 2;
+    }
+    
+    .team-builder {
+        grid-column: 1 / span 3;
+        grid-row: 3 / 3;
+    }
+    
+    .karma {
+        grid-column: 1 / span 3;
+        grid-row: 4 / 4; 
+    }
+    
+    .calculator {
+        grid-column: 1 / span 3;
+        grid-row: 5 / 5;
+    }
+}
